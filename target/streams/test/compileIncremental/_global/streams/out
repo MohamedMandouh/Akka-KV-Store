@@ -1,0 +1,14 @@
+[debug] The kvstore.Replica$ has the following regular definitions changed:
+[debug] 	UsedName(aroundPostRestart,[Default]).
+[debug] All member reference dependencies will be considered within this context.
+[debug] Files invalidated by inheriting from (external) kvstore.Replica$: Set(); now invalidating by inheritance (internally).
+[debug] Getting direct dependencies of all classes transitively invalidated by inheritance.
+[debug] Getting classes that directly depend on (external) kvstore.Replica$.
+[debug] None of the modified names appears in source file of kvstore.Step6_NewSecondarySpec. This dependency is not being considered for invalidation.
+[debug] None of the modified names appears in source file of kvstore.Step1_PrimarySpec. This dependency is not being considered for invalidation.
+[debug] None of the modified names appears in source file of kvstore.IntegrationSpec. This dependency is not being considered for invalidation.
+[debug] None of the modified names appears in source file of kvstore.Step5_PrimaryPersistenceSpec. This dependency is not being considered for invalidation.
+[debug] None of the modified names appears in source file of kvstore.Step4_SecondaryPersistenceSpec. This dependency is not being considered for invalidation.
+[debug] None of the modified names appears in source file of kvstore.Step2_SecondarySpec. This dependency is not being considered for invalidation.
+[debug] None of the modified names appears in source file of kvstore.Tools.Session. This dependency is not being considered for invalidation.
+[debug] No changes

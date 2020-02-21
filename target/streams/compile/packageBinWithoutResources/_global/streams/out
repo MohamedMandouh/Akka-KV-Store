@@ -1,0 +1,115 @@
+[debug] Packaging C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\reactive-kvstore-without-resources_2.13-0.1.0-SNAPSHOT.jar ...
+[debug] Input file mappings:
+[debug] 	
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes
+[debug] 	kvstore
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore
+[debug] 	kvstore\Arbiter$$anonfun$receive$1.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Arbiter$$anonfun$receive$1.class
+[debug] 	kvstore\Arbiter$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Arbiter$.class
+[debug] 	kvstore\Arbiter$Join$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Arbiter$Join$.class
+[debug] 	kvstore\Arbiter$JoinedPrimary$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Arbiter$JoinedPrimary$.class
+[debug] 	kvstore\Arbiter$JoinedSecondary$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Arbiter$JoinedSecondary$.class
+[debug] 	kvstore\Arbiter$Replicas$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Arbiter$Replicas$.class
+[debug] 	kvstore\Arbiter$Replicas.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Arbiter$Replicas.class
+[debug] 	kvstore\Arbiter.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Arbiter.class
+[debug] 	kvstore\Persistence$$anonfun$receive$1.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Persistence$$anonfun$receive$1.class
+[debug] 	kvstore\Persistence$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Persistence$.class
+[debug] 	kvstore\Persistence$Persist$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Persistence$Persist$.class
+[debug] 	kvstore\Persistence$Persist.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Persistence$Persist.class
+[debug] 	kvstore\Persistence$Persisted$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Persistence$Persisted$.class
+[debug] 	kvstore\Persistence$Persisted.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Persistence$Persisted.class
+[debug] 	kvstore\Persistence$PersistenceException.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Persistence$PersistenceException.class
+[debug] 	kvstore\Persistence.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Persistence.class
+[debug] 	kvstore\Replica$$anon$1.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$$anon$1.class
+[debug] 	kvstore\Replica$$anonfun$1.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$$anonfun$1.class
+[debug] 	kvstore\Replica$$anonfun$2.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$$anonfun$2.class
+[debug] 	kvstore\Replica$$anonfun$3.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$$anonfun$3.class
+[debug] 	kvstore\Replica$$anonfun$receive$1.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$$anonfun$receive$1.class
+[debug] 	kvstore\Replica$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$.class
+[debug] 	kvstore\Replica$Get$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$Get$.class
+[debug] 	kvstore\Replica$Get.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$Get.class
+[debug] 	kvstore\Replica$GetResult$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$GetResult$.class
+[debug] 	kvstore\Replica$GetResult.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$GetResult.class
+[debug] 	kvstore\Replica$Insert$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$Insert$.class
+[debug] 	kvstore\Replica$Insert.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$Insert.class
+[debug] 	kvstore\Replica$Operation.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$Operation.class
+[debug] 	kvstore\Replica$OperationAck$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$OperationAck$.class
+[debug] 	kvstore\Replica$OperationAck.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$OperationAck.class
+[debug] 	kvstore\Replica$OperationFailed$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$OperationFailed$.class
+[debug] 	kvstore\Replica$OperationFailed.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$OperationFailed.class
+[debug] 	kvstore\Replica$OperationReply.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$OperationReply.class
+[debug] 	kvstore\Replica$Remove$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$Remove$.class
+[debug] 	kvstore\Replica$Remove.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica$Remove.class
+[debug] 	kvstore\Replica.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replica.class
+[debug] 	kvstore\Replicator$$anon$1.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$$anon$1.class
+[debug] 	kvstore\Replicator$$anonfun$receive$1.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$$anonfun$receive$1.class
+[debug] 	kvstore\Replicator$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$.class
+[debug] 	kvstore\Replicator$Replicate$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$Replicate$.class
+[debug] 	kvstore\Replicator$Replicate.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$Replicate.class
+[debug] 	kvstore\Replicator$Replicated$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$Replicated$.class
+[debug] 	kvstore\Replicator$Replicated.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$Replicated.class
+[debug] 	kvstore\Replicator$Snapshot$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$Snapshot$.class
+[debug] 	kvstore\Replicator$Snapshot.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$Snapshot.class
+[debug] 	kvstore\Replicator$SnapshotAck$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$SnapshotAck$.class
+[debug] 	kvstore\Replicator$SnapshotAck.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator$SnapshotAck.class
+[debug] 	kvstore\Replicator.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Replicator.class
+[debug] 	kvstore\Timer$$anonfun$receive$2.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Timer$$anonfun$receive$2.class
+[debug] 	kvstore\Timer$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Timer$.class
+[debug] 	kvstore\Timer$TimePassed$.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Timer$TimePassed$.class
+[debug] 	kvstore\Timer$TimePassed.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Timer$TimePassed.class
+[debug] 	kvstore\Timer.class
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes\kvstore\Timer.class
+[debug] Done packaging.

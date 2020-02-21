@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuite hostname="HP" name="kvstore.KVStoreSuite" tests="21" errors="0" failures="2" skipped="0" time="33.744" timestamp="2020-02-18T20:26:37">
+                     <properties>
+      <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/><property name="java.specification.version" value="12"/><property name="sun.cpu.isalist" value="amd64"/><property name="sun.jnu.encoding" value="Cp1252"/><property name="sun.arch.data.model" value="64"/><property name="sbt.supershell" value="false"/><property name="java.vendor.url" value="https://java.oracle.com/"/><property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12.0.1\bin"/><property name="sun.java.command" value="C:\Users\Mohamed Mandouh\.IntelliJIdea2019.2\config\plugins\Scala\launcher\sbt-launch.jar --addPluginSbtFile=C:\Users\MOHAME~1\AppData\Local\Temp\idea1.sbt ; set ideaPort in Global := 54742 ; idea-shell"/><property name="jdk.debug" value="release"/><property name="sun.stderr.encoding" value="cp437"/><property name="java.specification.vendor" value="Oracle Corporation"/><property name="java.version.date" value="2019-04-16"/><property name="java.home" value="C:\Program Files\Java\jdk-12.0.1"/><property name="file.separator" value="\"/><property name="java.vm.compressedOopsMode" value="32-bit"/><property name="line.separator" value="
+"/><property name="sun.stdout.encoding" value="cp437"/><property name="java.vm.specification.vendor" value="Oracle Corporation"/><property name="java.specification.name" value="Java Platform API Specification"/><property name="user.script" value=""/><property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/><property name="java.runtime.version" value="12.0.1+12"/><property name="user.name" value="Mohamed Mandouh"/><property name="log4j.ignoreTCL" value="true"/><property name="file.encoding" value="UTF-8"/><property name="java.io.tmpdir" value="C:\Users\MOHAME~1\AppData\Local\Temp\"/><property name="java.version" value="12.0.1"/><property name="java.vm.specification.name" value="Java Virtual Machine Specification"/><property name="sun.os.patch.level" value=""/><property name="java.library.path" value="C:\Program Files\Java\jdk-12.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\jbr\\bin;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\jbr\\bin\server;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\dotnet\;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\DTS\Binn\;C:\Python27;C:\Program Files\Java\jdk-12.0.1\bin;C:\Program Files (x86)\scala\bin;C:\Program Files (x86)\sbt\bin;C:\Users\Mohamed Mandouh\AppData\Local\Microsoft\WindowsApps;C:\Users\Mohamed Mandouh\AppData\Roaming\npm;C:\Users\Mohamed Mandouh\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mohamed Mandouh\.dotnet\tools;C:\Users\Mohamed Mandouh\AppData\Local\GitHubDesktop\bin;C:\Users\Mohamed Mandouh\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\IntelliJ IDEA 2019.2\bin;;."/><property name="java.vendor" value="Oracle Corporation"/><property name="sun.io.unicode.encoding" value="UnicodeLittle"/><property name="sun.desktop" value="windows"/><property name="java.class.path" value="C:\Users\Mohamed Mandouh\.IntelliJIdea2019.2\config\plugins\Scala\launcher\sbt-launch.jar"/><property name="java.vm.vendor" value="Oracle Corporation"/><property name="user.variant" value=""/><property name="jline.shutdownhook" value="false"/><property name="user.timezone" value="Africa/Cairo"/><property name="java.vm.specification.version" value="12"/><property name="os.name" value="Windows 10"/><property name="sun.java.launcher" value="SUN_STANDARD"/><property name="user.country" value="US"/><property name="sun.cpu.endian" value="little"/><property name="user.home" value="C:\Users\Mohamed Mandouh"/><property name="user.language" value="en"/><property name="swoval.tmpdir" value="C:\Users\Mohamed Mandouh\.sbt\1.0"/><property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/><property name="jline.esc.timeout" value="0"/><property name="path.separator" value=";"/><property name="os.version" value="10.0"/><property name="jna.nosys" value="true"/><property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/><property name="sbt.log.noformat" value="true"/><property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/><property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/><property name="user.dir" value="C:\Users\Mohamed Mandouh\Desktop\kvstore"/><property name="os.arch" value="amd64"/><property name="idea.managed" value="true"/><property name="java.vm.info" value="mixed mode, sharing"/><property name="java.vm.version" value="12.0.1+12"/><property name="java.class.version" value="56.0"/>
+    </properties>
+                     <testcase classname="kvstore.KVStoreSuite" name="Step3-case1: Replicator should send snapshots when asked to replicate" time="12.076">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step1-case1: Primary (in isolation) should properly register itself to the provided Arbiter" time="0.1">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step1-case2: Primary (in isolation) should react properly to Insert, Remove, Get" time="0.074">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step4-case2: Secondary should retry persistence in every 100 milliseconds" time="0.788">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step5-case2: Primary retries persistence every 100 milliseconds" time="0.357">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step5-case5: Primary acknowledges only after persistence and global acknowledgement" time="0.655">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step4-case1: Secondary should not acknowledge snapshots until persisted" time="0.573">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements" time="0.04">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Integration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)" time="3.743">
+                                                 <failure message="java.lang.AssertionError: assertion failed: timeout (3 seconds) during expectMsg while waiting for OperationAck(10)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: timeout (3 seconds) during expectMsg while waiting for OperationAck(10)
+	at scala.Predef$.assert(Predef.scala:282)
+	at akka.testkit.TestKitBase.expectMsg_internal(TestKit.scala:418)
+	at akka.testkit.TestKitBase.expectMsg(TestKit.scala:395)
+	at akka.testkit.TestKitBase.expectMsg$(TestKit.scala:395)
+	at akka.testkit.TestKit.expectMsg(TestKit.scala:928)
+	at kvstore.Tools$Session.waitAck(Tools.scala:41)
+	at kvstore.Tools$Session.setAcked(Tools.scala:57)
+	at kvstore.IntegrationSpec.integrate(IntegrationSpec.scala:71)
+	at kvstore.IntegrationSpec.integrate$(IntegrationSpec.scala:27)
+	at kvstore.KVStoreSuite.integrate(KVStoreSuite.scala:5)
+	at kvstore.IntegrationSpec.Integration$minuscase3$colon$u0020Primary$u0020and$u0020secondaries$u0020must$u0020work$u0020in$u0020concert$u0020when$u0020both$u0020persistence$u0020and$u0020communication$u0020to$u0020secondaries$u0020are$u0020unreliable$u0020$u002835$u0020pts$u0029(IntegrationSpec.scala:24)
+	at kvstore.IntegrationSpec.Integration$minuscase3$colon$u0020Primary$u0020and$u0020secondaries$u0020must$u0020work$u0020in$u0020concert$u0020when$u0020both$u0020persistence$u0020and$u0020communication$u0020to$u0020secondaries$u0020are$u0020unreliable$u0020$u002835$u0020pts$u0029$(IntegrationSpec.scala:23)
+	at kvstore.KVStoreSuite.Integration$minuscase3$colon$u0020Primary$u0020and$u0020secondaries$u0020must$u0020work$u0020in$u0020concert$u0020when$u0020both$u0020persistence$u0020and$u0020communication$u0020to$u0020secondaries$u0020are$u0020unreliable$u0020$u002835$u0020pts$u0029(KVStoreSuite.scala:5)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+</failure>
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter" time="0.017">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case4: Secondary should drop snapshots with future sequence numbers" time="0.339">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers" time="0.039">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step5-case3: Primary generates failure after 1 second if persistence fails" time="1.05">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Integration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)" time="3.148">
+                                                 <failure message="java.lang.AssertionError: assertion failed: timeout (3 seconds) during expectMsg while waiting for GetResult(k1,Some(v1),2)" type="sbt.ForkMain$ForkError">sbt.ForkMain$ForkError: java.lang.AssertionError: assertion failed: timeout (3 seconds) during expectMsg while waiting for GetResult(k1,Some(v1),2)
+	at scala.Predef$.assert(Predef.scala:282)
+	at akka.testkit.TestKitBase.expectMsg_internal(TestKit.scala:418)
+	at akka.testkit.TestKitBase.expectMsg(TestKit.scala:395)
+	at akka.testkit.TestKitBase.expectMsg$(TestKit.scala:395)
+	at akka.testkit.TestKit.expectMsg(TestKit.scala:928)
+	at kvstore.Tools$Session.getAndVerify(Tools.scala:71)
+	at kvstore.IntegrationSpec.integrate(IntegrationSpec.scala:42)
+	at kvstore.IntegrationSpec.integrate$(IntegrationSpec.scala:27)
+	at kvstore.KVStoreSuite.integrate(KVStoreSuite.scala:5)
+	at kvstore.IntegrationSpec.Integration$minuscase1$colon$u0020Primary$u0020and$u0020secondaries$u0020must$u0020work$u0020in$u0020concert$u0020when$u0020persistence$u0020is$u0020unreliable$u0020$u002835pts$u0029(IntegrationSpec.scala:16)
+	at kvstore.IntegrationSpec.Integration$minuscase1$colon$u0020Primary$u0020and$u0020secondaries$u0020must$u0020work$u0020in$u0020concert$u0020when$u0020persistence$u0020is$u0020unreliable$u0020$u002835pts$u0029$(IntegrationSpec.scala:15)
+	at kvstore.KVStoreSuite.Integration$minuscase1$colon$u0020Primary$u0020and$u0020secondaries$u0020must$u0020work$u0020in$u0020concert$u0020when$u0020persistence$u0020is$u0020unreliable$u0020$u002835pts$u0029(KVStoreSuite.scala:5)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:160)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:138)
+	at com.novocode.junit.JUnitRunner$1.execute(JUnitRunner.java:132)
+	at sbt.ForkMain$Run.lambda$runTest$1(ForkMain.java:304)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+</failure>
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Integration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts)" time="0.15">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step6-case1: Primary must start replication to new replicas" time="9.066">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step3-case2: Replicator should retry until acknowledged by secondary" time="0.259">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step6-case2: Primary must stop replication to removed replicas and stop Replicator" time="0.051">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step2-case2: Secondary (in isolation) must handle Snapshots" time="0.035">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step5-case4: Primary generates failure after 1 second if global acknowledgement fails" time="1.048">
+                                                 
+                                               </testcase><testcase classname="kvstore.KVStoreSuite" name="Step5-case1: Primary does not acknowledge updates which have not been persisted" time="0.136">
+                                                 
+                                               </testcase>
+                     <system-out><![CDATA[]]></system-out>
+                     <system-err><![CDATA[]]></system-err>
+                   </testsuite>

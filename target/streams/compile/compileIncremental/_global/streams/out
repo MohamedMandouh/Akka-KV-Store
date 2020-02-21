@@ -1,0 +1,61 @@
+[debug] 
+[debug] Initial source changes: 
+[debug] 	removed:Set()
+[debug] 	added: Set()
+[debug] 	modified: Set(C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replica.scala)
+[debug] Invalidated products: Set()
+[debug] External API changes: API Changes: Set()
+[debug] Modified binary dependencies: Set()
+[debug] Initial directly invalidated classes: Set(kvstore.Timer, kvstore.Replica.OperationAck, kvstore.Replica, kvstore.Replica.Insert, kvstore.Replica.Operation, kvstore.Replica.GetResult, kvstore.Replica.Remove, kvstore.Replica.Get, kvstore.Replica.OperationReply, kvstore.Timer.TimePassed, kvstore.Replica.OperationFailed)
+[debug] 
+[debug] Sources indirectly invalidated by:
+[debug] 	product: Set()
+[debug] 	binary dep: Set()
+[debug] 	external source: Set()
+[debug] All initially invalidated classes: Set(kvstore.Timer, kvstore.Replica.OperationAck, kvstore.Replica, kvstore.Replica.Insert, kvstore.Replica.Operation, kvstore.Replica.GetResult, kvstore.Replica.Remove, kvstore.Replica.Get, kvstore.Replica.OperationReply, kvstore.Timer.TimePassed, kvstore.Replica.OperationFailed)
+[debug] All initially invalidated sources:Set(C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replica.scala)
+[debug] Initial set of included nodes: kvstore.Timer, kvstore.Replica.OperationAck, kvstore.Replica, kvstore.Replica.Insert, kvstore.Replica.Operation, kvstore.Replica.GetResult, kvstore.Replica.Remove, kvstore.Replica.Get, kvstore.Replica.OperationReply, kvstore.Timer.TimePassed, kvstore.Replica.OperationFailed
+[debug] Including kvstore.Replica.Remove by kvstore.Replica.Operation
+[debug] Including kvstore.Replica.Get by kvstore.Replica.Operation
+[debug] Including kvstore.Replica.OperationFailed by kvstore.Replica.OperationReply
+[info] Compiling 1 Scala source to C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes ...
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.3.1:compile for Scala 2.13.1
+[debug] Getting org.scala-sbt:compiler-bridge_2.13:1.3.1:compile for Scala 2.13.1
+[debug] [zinc] Running cached compiler 44909349 for Scala compiler version 2.13.1
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-feature
+[debug] 	-deprecation
+[debug] 	-encoding
+[debug] 	UTF-8
+[debug] 	-unchecked
+[debug] 	-Xlint
+[debug] 	-bootclasspath
+[debug] 	C:\Users\Mohamed Mandouh\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.1\scala-library-2.13.1.jar
+[debug] 	-classpath
+[debug] 	C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\classes;C:\Users\Mohamed Mandouh\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\com\typesafe\akka\akka-actor_2.13\2.6.0\akka-actor_2.13-2.6.0.jar;C:\Users\Mohamed Mandouh\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\org\scala-lang\modules\scala-java8-compat_2.13\0.9.0\scala-java8-compat_2.13-0.9.0.jar;C:\Users\Mohamed Mandouh\AppData\Local\Coursier\cache\v1\https\repo1.maven.org\maven2\com\typesafe\config\1.4.0\config-1.4.0.jar
+[debug] Scala compilation took 2.087151188 s
+[info] Done compiling.
+[debug] Invalidating (transitively) by inheritance from kvstore.Timer...
+[debug] Initial set of included nodes: kvstore.Timer
+[debug] Invalidated by transitive inheritance dependency: Set(kvstore.Timer)
+[debug] Change NamesChange(kvstore.Timer,ModifiedNames(changes = UsedName(aroundPostRestart,[Default]), UsedName(finalize,[Default]))) invalidates 1 classes due to The kvstore.Timer has the following regular definitions changed:
+[debug] 	UsedName(aroundPostRestart,[Default]), UsedName(finalize,[Default]).
+[debug] 	> by transitive inheritance: Set(kvstore.Timer)
+[debug] 	> 
+[debug] 	> 
+[debug]         
+[debug] Invalidating (transitively) by inheritance from kvstore.Replica...
+[debug] Initial set of included nodes: kvstore.Replica
+[debug] Invalidated by transitive inheritance dependency: Set(kvstore.Replica)
+[debug] Change NamesChange(kvstore.Replica,ModifiedNames(changes = UsedName(aroundPostRestart,[Default]))) invalidates 1 classes due to The kvstore.Replica has the following regular definitions changed:
+[debug] 	UsedName(aroundPostRestart,[Default]).
+[debug] 	> by transitive inheritance: Set(kvstore.Replica)
+[debug] 	> 
+[debug] 	> 
+[debug]         
+[debug] New invalidations:
+[debug] 	Set()
+[debug] Initial set of included nodes: 
+[debug] Previously invalidated, but (transitively) depend on new invalidations:
+[debug] 	Set()
+[debug] No classes were invalidated.

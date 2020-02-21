@@ -1,0 +1,11 @@
+[debug] Packaging C:\Users\Mohamed Mandouh\Desktop\kvstore\target\scala-2.13\reactive-kvstore_2.13-0.1.0-SNAPSHOT-sources.jar ...
+[debug] Input file mappings:
+[debug] 	kvstore\Arbiter.scala
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Arbiter.scala
+[debug] 	kvstore\Persistence.scala
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Persistence.scala
+[debug] 	kvstore\Replica.scala
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replica.scala
+[debug] 	kvstore\Replicator.scala
+[debug] 	  C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replicator.scala
+[debug] Done packaging.

@@ -1,0 +1,92 @@
+[debug] javaOptions: Vector()
+[debug] Forking tests - parallelism = false
+[debug] Create a single-thread test executor
+[debug] Runner for com.novocode.junit.JUnitFramework produced 1 initial tasks for 1 tests.
+[debug]   Running TaskDef(kvstore.KVStoreSuite, sbt.ForkMain$AnnotatedFingerscan@1de47dd1, false, [SuiteSelector])
+[info] Test run started
+[info] Test kvstore.KVStoreSuite.Step3-case1: Replicator should send snapshots when asked to replicate started
+[debug] Test kvstore.KVStoreSuite.Step3-case1: Replicator should send snapshots when asked to replicate finished, took 12.076 sec
+[info] Test kvstore.KVStoreSuite.Step1-case1: Primary (in isolation) should properly register itself to the provided Arbiter started
+[debug] Test kvstore.KVStoreSuite.Step1-case1: Primary (in isolation) should properly register itself to the provided Arbiter finished, took 0.1 sec
+[info] Test kvstore.KVStoreSuite.Step1-case2: Primary (in isolation) should react properly to Insert, Remove, Get started
+[debug] Test kvstore.KVStoreSuite.Step1-case2: Primary (in isolation) should react properly to Insert, Remove, Get finished, took 0.074 sec
+[info] Test kvstore.KVStoreSuite.Step4-case2: Secondary should retry persistence in every 100 milliseconds started
+[debug] Test kvstore.KVStoreSuite.Step4-case2: Secondary should retry persistence in every 100 milliseconds finished, took 0.788 sec
+[info] Test kvstore.KVStoreSuite.Step5-case2: Primary retries persistence every 100 milliseconds started
+[debug] Test kvstore.KVStoreSuite.Step5-case2: Primary retries persistence every 100 milliseconds finished, took 0.357 sec
+[info] Test kvstore.KVStoreSuite.Step5-case5: Primary acknowledges only after persistence and global acknowledgement started
+[debug] Test kvstore.KVStoreSuite.Step5-case5: Primary acknowledges only after persistence and global acknowledgement finished, took 0.655 sec
+[info] Test kvstore.KVStoreSuite.Step4-case1: Secondary should not acknowledge snapshots until persisted started
+[debug] Test kvstore.KVStoreSuite.Step4-case1: Secondary should not acknowledge snapshots until persisted finished, took 0.573 sec
+[info] Test kvstore.KVStoreSuite.Step6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements started
+[debug] Test kvstore.KVStoreSuite.Step6-case3: Primary must stop replication to removed replicas and waive their outstanding acknowledgements finished, took 0.04 sec
+[info] Test kvstore.KVStoreSuite.Integration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts) started
+[error] Test kvstore.KVStoreSuite.Integration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts) failed: java.lang.AssertionError: assertion failed: timeout (3 seconds) during expectMsg while waiting for OperationAck(10), took 3.743 sec
+[error]     at scala.Predef$.assert(Predef.scala:282)
+[error]     at akka.testkit.TestKitBase.expectMsg_internal(TestKit.scala:418)
+[error]     at akka.testkit.TestKitBase.expectMsg(TestKit.scala:395)
+[error]     at akka.testkit.TestKitBase.expectMsg$(TestKit.scala:395)
+[error]     at akka.testkit.TestKit.expectMsg(TestKit.scala:928)
+[error]     at kvstore.Tools$Session.waitAck(Tools.scala:41)
+[error]     at kvstore.Tools$Session.setAcked(Tools.scala:57)
+[error]     at kvstore.IntegrationSpec.integrate(IntegrationSpec.scala:71)
+[error]     at kvstore.IntegrationSpec.integrate$(IntegrationSpec.scala:27)
+[error]     at kvstore.KVStoreSuite.integrate(KVStoreSuite.scala:5)
+[error]     at kvstore.IntegrationSpec.Integration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)(IntegrationSpec.scala:24)
+[error]     at kvstore.IntegrationSpec.Integration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)$(IntegrationSpec.scala:23)
+[error]     at kvstore.KVStoreSuite.Integration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts)(KVStoreSuite.scala:5)
+[error]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[error]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[error]     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[error]     at java.lang.reflect.Method.invoke(Method.java:567)
+[error]     ...
+[debug] Test kvstore.KVStoreSuite.Integration-case3: Primary and secondaries must work in concert when both persistence and communication to secondaries are unreliable (35 pts) finished, took 3.753 sec
+[info] Test kvstore.KVStoreSuite.Step2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter started
+[debug] Test kvstore.KVStoreSuite.Step2-case1: Secondary (in isolation) should properly register itself to the provided Arbiter finished, took 0.017 sec
+[info] Test kvstore.KVStoreSuite.Step2-case4: Secondary should drop snapshots with future sequence numbers started
+[debug] Test kvstore.KVStoreSuite.Step2-case4: Secondary should drop snapshots with future sequence numbers finished, took 0.339 sec
+[info] Test kvstore.KVStoreSuite.Step2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers started
+[debug] Test kvstore.KVStoreSuite.Step2-case3: Secondary should drop and immediately ack snapshots with older sequence numbers finished, took 0.039 sec
+[info] Test kvstore.KVStoreSuite.Step5-case3: Primary generates failure after 1 second if persistence fails started
+[debug] Test kvstore.KVStoreSuite.Step5-case3: Primary generates failure after 1 second if persistence fails finished, took 1.05 sec
+[info] Test kvstore.KVStoreSuite.Integration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts) started
+[error] Test kvstore.KVStoreSuite.Integration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts) failed: java.lang.AssertionError: assertion failed: timeout (3 seconds) during expectMsg while waiting for GetResult(k1,Some(v1),2), took 3.148 sec
+[error]     at scala.Predef$.assert(Predef.scala:282)
+[error]     at akka.testkit.TestKitBase.expectMsg_internal(TestKit.scala:418)
+[error]     at akka.testkit.TestKitBase.expectMsg(TestKit.scala:395)
+[error]     at akka.testkit.TestKitBase.expectMsg$(TestKit.scala:395)
+[error]     at akka.testkit.TestKit.expectMsg(TestKit.scala:928)
+[error]     at kvstore.Tools$Session.getAndVerify(Tools.scala:71)
+[error]     at kvstore.IntegrationSpec.integrate(IntegrationSpec.scala:42)
+[error]     at kvstore.IntegrationSpec.integrate$(IntegrationSpec.scala:27)
+[error]     at kvstore.KVStoreSuite.integrate(KVStoreSuite.scala:5)
+[error]     at kvstore.IntegrationSpec.Integration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)(IntegrationSpec.scala:16)
+[error]     at kvstore.IntegrationSpec.Integration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)$(IntegrationSpec.scala:15)
+[error]     at kvstore.KVStoreSuite.Integration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts)(KVStoreSuite.scala:5)
+[error]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+[error]     at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+[error]     at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+[error]     at java.lang.reflect.Method.invoke(Method.java:567)
+[error]     ...
+[debug] Test kvstore.KVStoreSuite.Integration-case1: Primary and secondaries must work in concert when persistence is unreliable (35pts) finished, took 3.152 sec
+[info] Test kvstore.KVStoreSuite.Integration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts) started
+[debug] Test kvstore.KVStoreSuite.Integration-case2: Primary and secondaries must work in concert when communication to secondaries is unreliable (35pts) finished, took 0.15 sec
+[info] Test kvstore.KVStoreSuite.Step6-case1: Primary must start replication to new replicas started
+[debug] Test kvstore.KVStoreSuite.Step6-case1: Primary must start replication to new replicas finished, took 9.066 sec
+[info] Test kvstore.KVStoreSuite.Step3-case2: Replicator should retry until acknowledged by secondary started
+[debug] Test kvstore.KVStoreSuite.Step3-case2: Replicator should retry until acknowledged by secondary finished, took 0.259 sec
+[info] Test kvstore.KVStoreSuite.Step6-case2: Primary must stop replication to removed replicas and stop Replicator started
+[debug] Test kvstore.KVStoreSuite.Step6-case2: Primary must stop replication to removed replicas and stop Replicator finished, took 0.051 sec
+[info] Test kvstore.KVStoreSuite.Step2-case2: Secondary (in isolation) must handle Snapshots started
+[debug] Test kvstore.KVStoreSuite.Step2-case2: Secondary (in isolation) must handle Snapshots finished, took 0.035 sec
+[info] Test kvstore.KVStoreSuite.Step5-case4: Primary generates failure after 1 second if global acknowledgement fails started
+[debug] Test kvstore.KVStoreSuite.Step5-case4: Primary generates failure after 1 second if global acknowledgement fails finished, took 1.048 sec
+[info] Test kvstore.KVStoreSuite.Step5-case1: Primary does not acknowledge updates which have not been persisted started
+[debug] Test kvstore.KVStoreSuite.Step5-case1: Primary does not acknowledge updates which have not been persisted finished, took 0.136 sec
+[info] Test run finished: 2 failed, 0 ignored, 21 total, 35.614s
+[debug]     Produced 0 nested tasks and 21 events.
+[debug] Summary for JUnit not available.
+[error] Failed: Total 21, Failed 2, Errors 0, Passed 19
+[error] Failed tests:
+[error] 	kvstore.KVStoreSuite
+[error] (Test / test) sbt.TestsFailedException: Tests unsuccessful

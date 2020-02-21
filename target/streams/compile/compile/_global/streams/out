@@ -1,0 +1,24 @@
+[debug] Acquiring lock on file C:\Users\Mohamed Mandouh\Desktop\kvstore\project\target\.sbt-compilation-infos\kvstore-compile\.sbt-idea-lock ...
+[warn] C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replica.scala:3:13: Unused import
+[warn] import akka.Done
+[warn]             ^
+[warn] C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replica.scala:5:75: Unused import
+[warn] import akka.actor.{Actor, ActorRef, OneForOneStrategy, PoisonPill, Props, SupervisorStrategy, Terminated}
+[warn]                                                                           ^
+[warn] C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replica.scala:5:95: Unused import
+[warn] import akka.actor.{Actor, ActorRef, OneForOneStrategy, PoisonPill, Props, SupervisorStrategy, Terminated}
+[warn]                                                                                               ^
+[warn] C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replica.scala:8:22: Unused import
+[warn] import akka.pattern.{ask, pipe}
+[warn]                      ^
+[warn] C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replica.scala:8:27: Unused import
+[warn] import akka.pattern.{ask, pipe}
+[warn]                           ^
+[warn] C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replica.scala:11:18: Unused import
+[warn] import akka.util.Timeout
+[warn]                  ^
+[warn] C:\Users\Mohamed Mandouh\Desktop\kvstore\src\main\scala\kvstore\Replica.scala:36:16: Unused import
+[warn]   import Timer._
+[warn]                ^
+[warn] 7 warnings found
+[debug] Releasing lock on file C:\Users\Mohamed Mandouh\Desktop\kvstore\project\target\.sbt-compilation-infos\kvstore-compile\.sbt-idea-lock.
