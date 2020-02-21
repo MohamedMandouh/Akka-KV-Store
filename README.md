@@ -11,7 +11,7 @@
 ## Overview of the system components
 The key-value store and its environment consists of the following components:
 
-- **The clustered key-value store:** A set of nodes that store key value pairs in a distributed fashion, cooperating to maintain a certain set of guarantees (specified in section “System Behavior - Consistency guarantees”). This cluster of nodes consists of replicas and the provided Arbiter and Persistence modules:
+- **The clustered key-value store:** A set of nodes that store key value pairs in a distributed fashion, cooperating to maintain a certain set of guarantees. This cluster of nodes consists of replicas and the provided Arbiter and Persistence modules:
 - **Primary replica** A distinguished node in the cluster that accepts updates to keys and propagates the changes to secondary replicas.
 - **Secondary replicas Nodes** that are in contact with the primary replica, accepting updates from it and serving clients for read-only operations.
 - **Arbiter:** A subsystem that is provided in this exercise and which assigns the primary or secondary roles to your nodes.
