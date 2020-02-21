@@ -49,9 +49,9 @@ A failed Insert or Remove command results in an OperationFailed(id) reply. A fai
 
 ## Arbiter:
 The Arbiter is an external subsystem that is provided in the assignment. 
-New replicas must first send a Join message to the Arbiter signaling that they are ready to be used.
-The Join message will be answered by either a JoinedPrimary or JoinedSecondary message indicating the role of the new node
-The arbiter will send a Replicas message to the primary replica that contains the set of available replica nodes including the primary and all the secondaries whenever it receives the Join message.
+New replicas must first send a ```Join``` message to the Arbiter signaling that they are ready to be used.
+The ```Join``` message will be answered by either a ```JoinedPrimary``` or ```JoinedSecondary``` message indicating the role of the new node
+The arbiter will send a ```Replicas``` message to the primary replica that contains the set of available replica nodes including the primary and all the secondaries whenever it receives the Join message.
 
 ## Persistence:
 Each replica will have to submit incoming updates to the local Persistence actor and wait for its acknowledgement before confirming the update to the requester.
