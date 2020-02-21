@@ -9,7 +9,6 @@ import akka.pattern.{ask, pipe}
 
 import scala.concurrent.duration._
 import akka.util.Timeout
-import kvstore.Timer.TimePassed
 
 object Replica {
   sealed trait Operation {
@@ -25,6 +24,8 @@ object Replica {
   case class OperationFailed(id: Long) extends OperationReply
   case class GetResult(key: String, valueOption: Option[String], id: Long) extends OperationReply
 
+  case class TimePassed(key:String,id:Long)
+
   def props(arbiter: ActorRef, persistenceProps: Props): Props = Props(new Replica(arbiter, persistenceProps))
 }
 
@@ -33,13 +34,6 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   import Replicator._
   import Persistence._
   import context.dispatcher
-  import Timer._
-
-  override val supervisorStrategy = OneForOneStrategy() { case _: PersistenceException => Restart}
-
-  context.system.scheduler.scheduleWithFixedDelay(100.millisecond,100.millisecond){ new Runnable {
-    override def run(): Unit = if(!persisted) persistence ! pending.second
-  }}
 
   // a map from secondary replicas to replicators
   var kv = Map.empty[String, String]
@@ -47,17 +41,22 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   var secondaries = Map.empty[ActorRef, ActorRef]
   //Persistence Service
   val persistence = context.actorOf(persistenceProps,"MyChild")
-  //Stores Current Update
-  var pending : Pair[ActorRef,Persist] = Pair(self,Persist("none",None,-1))
+  //Stores Current Updates
+  var pending  = Map.empty[String,Pair[ActorRef,Persist]]
+  //Pair(self,Persist("none",None,-1))
   //set of acknowledgments from Replicators
-  var acks  = Set.empty[ActorRef]
-  // an actor used to Set a timeout of 1 second for each update
-  var timer : ActorRef= _
-  var persisted = true
-  //ignore all timeouts fired from timer after we confirmed the update
-  var ignoreTimer = false
-  var updateGoing= false
+  var acks  = Map.empty[String,Set[ActorRef]]
+  //the keys from which we await confirmation
+  var persisted = Map.empty[String,Boolean]
+  var updateGoing = Map.empty[String,Boolean]
 
+  //restart persistence service if failed
+  override val supervisorStrategy = OneForOneStrategy() { case _: PersistenceException => Restart}
+
+  // if not recieved confirmation from persistence for 100 ms; retry
+  context.system.scheduler.scheduleWithFixedDelay(100.millisecond,100.millisecond){ new Runnable {
+    override def run(): Unit = pending foreach(p => if(!persisted(p._1)) persistence ! p._2.second)
+  }}
   //First: primary joins the system
   arbiter ! Join
 
@@ -67,61 +66,68 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
   }
   val leader: Receive = {
     case Replicated(key,id) if id != -1  =>
-      acks -= sender
-      if(acks.isEmpty&& persisted) {
-        context.stop(timer)
-        ignoreTimer =true
-        updateGoing=false
-        pending.first ! OperationAck(id)
+      acks += (key-> acks(key).excl(sender))
+      if(acks(key).isEmpty&& persisted(key)) {
+        updateGoing+= key->false
+        pending(key).first ! OperationAck(id)
+        pending-= key
       }
 
     case Persisted(key,id) =>
-      persisted = true
-      if(acks.isEmpty) {
-        context.stop(timer)
-        ignoreTimer = true
-        updateGoing=false
-        pending.first ! OperationAck(id)
+      persisted += (key->true)
+      if(acks(key).isEmpty) {
+        updateGoing += key->false
+        pending(key).first ! OperationAck(id)
+        pending -= key
       }
 
-    case Timer.TimePassed(id,ref) if !ignoreTimer =>  ref ! OperationFailed(id)
+    case TimePassed(key,id) => if (updateGoing(key)) {
+      pending(key).first ! OperationFailed(id)
+    }
 
     case Get(key,id) => sender ! GetResult(key,kv get key,id)
 
     case Insert(key,value,id) =>
-      timer = context.actorOf(Props(new Timer(id,sender,self)))
-       kv += (key -> value)
+      kv += (key -> value)
+      persisted += key-> false
+      updateGoing += key-> true
       persistence ! Persist(key,Some(value),id)
-      persisted=false
-      ignoreTimer=false
-      updateGoing=true
-      pending = Pair(sender,Persist(key,Some(value),id))
-      acks = secondaries.values.toSet
-      acks foreach(_ ! Replicate(key,Some(value),id))
+      pending += key-> Pair(sender,Persist(key,Some(value),id))
+      acks += key -> secondaries.values.toSet
+      acks(key) foreach(_ ! Replicate(key,Some(value),id))
+      //allow 1 second for global acknowledgement of update
+      context.system.scheduler.scheduleOnce(1.second){
+        self ! TimePassed(key,id)
+      }
 
     case Remove(key,id) =>
-     timer = context.actorOf(Props(new Timer(id,sender,self)))
       kv -= key
+      persisted += key-> false
+      updateGoing += key-> true
       persistence ! Persist(key,None,id)
-      persisted=false
-      ignoreTimer=false
-      updateGoing=true
-      pending = Pair(sender,Persist(key,None,id))
-      acks = secondaries.values.toSet
-      acks foreach(_ ! Replicate(key,None,id))
+      pending += key-> Pair(sender,Persist(key,None,id))
+      acks += key -> secondaries.values.toSet
+      acks(key) foreach(_ ! Replicate(key,None,id))
+
+      context.system.scheduler.scheduleOnce(1.second){
+        self ! TimePassed(key,id)
+      }
 
     case  Replicas(all)  =>
       val replicas = all - self
       val oldReplicas = secondaries.keys.toSet -- replicas
       val oldReplicators = oldReplicas map secondaries
-      acks --= oldReplicators
-      if(acks.isEmpty && updateGoing) {
-          pending.first ! OperationAck(pending.second.id)
-      }
+      acks = for ((k,s) <- acks) yield  k -> s.removedAll(oldReplicators)
       oldReplicators foreach (_ ! PoisonPill)
+
+      //trigger operation ack after old replicators have been removed
+      acks.keys foreach(k => if(acks(k).isEmpty && updateGoing(k)) {
+        pending(k).first ! OperationAck(pending(k).second.id)
+      })
+
       val newReplicaReplicator = (for{
         r <- replicas -- secondaries.keys.toSet
-      } yield (r-> context.actorOf(Props(new Replicator(r))))).toMap
+      } yield r-> context.actorOf(Props(new Replicator(r)))).toMap
 
       secondaries --= oldReplicas
       secondaries ++= newReplicaReplicator
@@ -140,26 +146,14 @@ class Replica(val arbiter: ActorRef, persistenceProps: Props) extends Actor {
         }
         expected = seq +1
         persistence ! Persist(key,valueOption,seq)
-        persisted=false
-        pending = Pair(sender,Persist(key,valueOption,seq))
+        persisted+= key->false
+        pending += key-> Pair(sender,Persist(key,valueOption,seq))
       }
       else if(seq<expected) sender ! SnapshotAck(key,seq)
     case Persisted(key ,seq) =>
-      persisted=true
-      pending.first ! SnapshotAck(key,seq)
-}
-}
-
-object Timer {
-  case class TimePassed(id:Long,ref : ActorRef)
-}
-
-class Timer(id :Long, ref : ActorRef, parent:ActorRef) extends  Actor{
-  implicit val executionContext = context.system.dispatcher
-  context.system.scheduler.scheduleOnce(1.second){
-    parent ! TimePassed(id,ref)
+      persisted+= key -> true
+      pending(key).first ! SnapshotAck(key,seq)
   }
-  override def receive: Receive = {case _=> context.stop(self)}
 }
 
 
